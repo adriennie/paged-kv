@@ -1,0 +1,2 @@
+python_version,pytorch_version,cuda_available,cuda_version,gpu_device_name,timestamp
+3.13.15,2.11.0+cu128,True,12.8,Tesla T4,2026-10-09 13:04:16

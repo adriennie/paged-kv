@@ -1,0 +1,19 @@
+Engine,Batch Size,Total Time (s),Total Generated Tokens,Throughput (tok/s),Request Rate (req/s),Agg Sec/Tok/Req,Base VRAM (GB),Peak Allocated VRAM (GB),Peak Reserved VRAM (GB),Incremental VRAM (GB)
+Hugging Face generate(),1,6.491,128,19.72,0.15,0.0507,3.46,3.47,4.93,0.01
+Hugging Face generate(),2,5.972,256,42.87,0.33,0.0467,3.46,3.47,4.93,0.01
+Hugging Face generate(),4,6.102,512,83.91,0.66,0.0477,3.46,3.48,4.93,0.02
+Hugging Face generate(),8,6.27,1024,163.31,1.28,0.049,3.46,3.53,4.96,0.07
+Hugging Face generate(),16,6.301,2048,325.02,2.54,0.0492,3.46,3.6,4.96,0.14
+Hugging Face generate(),32,6.675,4096,613.65,4.79,0.0521,3.46,3.74,4.96,0.28
+Hugging Face Transformers,1,6.819,128,18.77,0.15,0.0533,3.46,3.47,3.5,0.01
+Hugging Face Transformers,2,14.073,256,18.19,0.14,0.1099,3.46,3.48,3.5,0.01
+Hugging Face Transformers,4,14.208,512,36.04,0.28,0.111,3.46,3.49,3.52,0.03
+Hugging Face Transformers,8,16.673,1024,61.42,0.48,0.1303,3.46,3.55,3.61,0.08
+Hugging Face Transformers,16,19.14,2048,107.0,0.84,0.1495,3.46,3.63,3.77,0.17
+Hugging Face Transformers,32,23.615,4096,173.45,1.36,0.1845,3.46,3.8,4.04,0.33
+vLLM (PagedAttention),1,4.259,128,30.05,0.23,0.0333,0.0,0.0,0.0,0.0
+vLLM (PagedAttention),2,5.107,256,50.13,0.39,0.0399,0.0,0.0,0.0,0.0
+vLLM (PagedAttention),4,4.411,512,116.06,0.91,0.0345,0.0,0.0,0.0,0.0
+vLLM (PagedAttention),8,4.511,1024,226.98,1.77,0.0352,0.0,0.0,0.0,0.0
+vLLM (PagedAttention),16,7.568,2048,270.61,2.11,0.0591,0.0,0.0,0.0,0.0
+vLLM (PagedAttention),32,4.667,4096,877.69,6.86,0.0365,0.0,0.0,0.0,0.0
