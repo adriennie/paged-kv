@@ -82,7 +82,7 @@ The throughput panel reflects the stored measurements. The peak VRAM panel shoul
 ```text
 .
 ├── vllm_vs_hf_benchmark.ipynb       # Colab-oriented vLLM run and comparison workflow
-├── vllmproject.ipynb                # Kaggle exploration and Hugging Face benchmark notebook
+├── qwen_vllm_multi_adapter_serving.ipynb                # Kaggle exploration and Hugging Face benchmark notebook
 ├── final_vllm_vs_hf_benchmark.csv   # Combined HF and vLLM measurements
 ├── vllm_results.csv                 # vLLM measurements
 ├── results/
@@ -97,7 +97,7 @@ The throughput panel reflects the stored measurements. The peak VRAM panel shoul
 
 ## Reproducing the experiment
 
-1. **Choose a GPU notebook runtime.** Open `vllm_vs_hf_benchmark.ipynb` in Colab with a Tesla T4-class GPU for the vLLM run. The Hugging Face baseline notebook is `vllmproject.ipynb` and was developed for Kaggle. GPU availability and notebook package versions vary over time.
+1. **Choose a GPU notebook runtime.** Open `vllm_vs_hf_benchmark.ipynb` in Colab with a Tesla T4-class GPU for the vLLM run. The Hugging Face baseline notebook is `qwen_vllm_multi_adapter_serving.ipynb` and was developed for Kaggle. GPU availability and notebook package versions vary over time.
 2. **Inspect the configuration before running.** The benchmark uses Qwen2.5-1.5B-Instruct, batch sizes `[1, 2, 4, 8, 16, 32]`, variable prompts, and up to 128 generated tokens. The vLLM notebook installs its dependencies in the notebook and configures Engine V0 for the T4 workflow.
 3. **Run the baseline and vLLM measurements.** Execute the relevant benchmark cells in their intended GPU runtime. Save each environment's `benchmark_results.csv` or `vllm_results.csv` output.
 4. **Combine and plot results.** In the vLLM notebook, place the HF `benchmark_results.csv` and vLLM `vllm_results.csv` in the working directory and run the comparison cell. It writes `final_vllm_vs_hf_benchmark.csv` and `vllm_vs_hf_final_comparison.png`.
